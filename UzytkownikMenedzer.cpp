@@ -1,5 +1,7 @@
 #include "UzytkownikMenedzer.h"
 
+
+
 void UzytkownikMenedzer::rejestracjaUzytkownika()
 {
     Uzytkownik uzytkownik = podajDaneNowegoUzytkownika();
@@ -67,6 +69,11 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
             cout << uzytkownicy[i].pobierzHaslo()<< endl;
 
         }
+}
+
+void UzytkownikMenedzer::wczytajUzytkownikowZPliku()
+{
+   uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
 
 
