@@ -1,3 +1,6 @@
+#ifndef UZYTKOWNIK_H
+#define UZYTKOWNIK_H
+
 #include <iostream>
 
 
@@ -19,3 +22,4 @@ public:
     string pobierzHaslo();
 
 };
+#endif // GRANDPARENT_H
