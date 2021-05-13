@@ -82,10 +82,8 @@ int UzytkownikMenedzer::logowanieUzytkownika()
     string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";
-    login = wczytajLinie();
+    login = metodyPomocnicze.wczytajLinie();
 
-  //  vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
-  //  while (itr != uzytkownicy.end())
   for (int i = 0; i<uzytkownicy.size();i++)
 
     {
@@ -94,13 +92,14 @@ int UzytkownikMenedzer::logowanieUzytkownika()
             for (int iloscProb = 3; iloscProb > 0; iloscProb--)
             {
                 cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
-                haslo = wczytajLinie();
+                haslo = metodyPomocnicze.wczytajLinie();
 
                 if (uzytkownicy[i].pobierzHaslo() == haslo)
                 {
                     cout << endl << "Zalogowales sie." <<endl << endl;
                     system("pause");
-                    return uzytkownicy[i].pobierzId();
+                    idZalogowanegoUzytkownika = uzytkownicy[i].pobierzId();
+                    return idZalogowanegoUzytkownika;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
@@ -114,11 +113,27 @@ int UzytkownikMenedzer::logowanieUzytkownika()
     return 0;
 }
 
-string UzytkownikMenedzer::wczytajLinie()
+
+
+void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
 {
-    string wejscie = "";
-    getline(cin, wejscie);
-    return wejscie;
+    string noweHaslo = "";
+    cout << "Podaj nowe haslo: ";
+    noweHaslo = metodyPomocnicze.wczytajLinie();
+
+ //   for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
+   // {
+    for (int i = 0; i<uzytkownicy.size();i++)
+
+    {
+        if (uzytkownicy[i].pobierzId() == idZalogowanegoUzytkownika)
+        {
+            uzytkownicy[i].ustawHaslo(noweHaslo);
+            cout << "Haslo zostalo zmienione." <<idZalogowanegoUzytkownika <<endl << endl;
+            system("pause");
+        }
+    }
+    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
 
 

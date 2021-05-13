@@ -7,6 +7,7 @@
 #include <fstream>
 #include <sstream>
 #include "PlikZUzytkownikami.h"
+#include "MetodyPomocnicze.h"
 
 
 using namespace std;
@@ -20,7 +21,10 @@ class UzytkownikMenedzer
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
     PlikZUzytkownikami plikZUzytkownikami;
-    string wczytajLinie();
+    MetodyPomocnicze metodyPomocnicze;
+    void zapiszWszystkichUzytkownikowDoPliku(vector<Uzytkownik> uzytkownicy);
+
+
 
 
 public:
@@ -29,6 +33,9 @@ public:
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
     int logowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
+
+    string wczytajLinie();
 
 };
 #endif
