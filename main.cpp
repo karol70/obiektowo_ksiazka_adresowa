@@ -7,14 +7,14 @@ int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
     ksiazkaAdresowa.logowanieUzytkownika();
-    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-
+  //  ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+    ksiazkaAdresowa.wylogowanieUzytkownika();
   //  ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
   //  ksiazkaAdresowa.rejestracjaUzytkownika();
-  //  ksiazkaAdresowa.rejestracjaUzytkownika();
-   ksiazkaAdresowa.logowanieUzytkownika();
+
+
    // ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-   ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+
 
 
     return 0;
