@@ -1,0 +1,4 @@
+1|3|Kasrr|Asdasd|123123|123|12|
+2|3|Asdasd|1231||123123|asd|
+1|4|Ditu|123|asd|a|sd123|
+2|4|Asdasd|123|as|da|2333|

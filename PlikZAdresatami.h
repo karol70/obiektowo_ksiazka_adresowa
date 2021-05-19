@@ -19,6 +19,7 @@ class PlikZAdresatami
     string nazwaPlikuZAdresatami;
     MetodyPomocnicze metodyPomocnicze;
     bool czyPlikJestPusty();
+    Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
 
 public:
     PlikZAdresatami()
@@ -26,10 +27,8 @@ public:
      nazwaPlikuZAdresatami = "Adresaci.txt";
     }
     void dopiszAdresataDoPliku(Adresat adresat);
-
-
-
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
+    vector<Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
 
 
 };
