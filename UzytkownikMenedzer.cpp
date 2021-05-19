@@ -1,6 +1,9 @@
 #include "UzytkownikMenedzer.h"
 
-
+int UzytkownikMenedzer::odczytajIdZalogowanegoUzytkownika()
+{
+    return idZalogowanegoUzytkownika;
+}
 
 void UzytkownikMenedzer::rejestracjaUzytkownika()
 {
@@ -63,6 +66,7 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login)
 void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
 {
     for (int i = 0; i<uzytkownicy.size();i++)
+
         {
             cout << uzytkownicy[i].pobierzId()<< endl;
             cout << uzytkownicy[i].pobierzLogin()<< endl;
@@ -81,7 +85,7 @@ int UzytkownikMenedzer::logowanieUzytkownika()
     Uzytkownik uzytkownik;
     string login = "", haslo = "";
 
-    cout << endl << "Podaj login: ";
+    cout << "Podaj login: ";
     login = metodyPomocnicze.wczytajLinie();
 
   for (int i = 0; i<uzytkownicy.size();i++)
@@ -98,8 +102,10 @@ int UzytkownikMenedzer::logowanieUzytkownika()
                 {
                     cout << endl << "Zalogowales sie." <<endl << endl;
                     system("pause");
+
                     idZalogowanegoUzytkownika = uzytkownicy[i].pobierzId();
                     return idZalogowanegoUzytkownika;
+
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
@@ -121,8 +127,7 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
     cout << "Podaj nowe haslo: ";
     noweHaslo = metodyPomocnicze.wczytajLinie();
 
- //   for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
-   // {
+
     for (int i = 0; i<uzytkownicy.size();i++)
 
     {
@@ -142,6 +147,7 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
     cout << "Wylogowano";
     system("pause");
     return idZalogowanegoUzytkownika;
+
    }
 
 

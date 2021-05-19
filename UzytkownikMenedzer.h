@@ -12,6 +12,7 @@
 
 using namespace std;
 
+
 class UzytkownikMenedzer
 {
     int idZalogowanegoUzytkownika;
@@ -24,9 +25,6 @@ class UzytkownikMenedzer
     MetodyPomocnicze metodyPomocnicze;
     void zapiszWszystkichUzytkownikowDoPliku(vector<Uzytkownik> uzytkownicy);
 
-
-
-
 public:
     UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami){};
     void rejestracjaUzytkownika();
@@ -35,8 +33,7 @@ public:
     int logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     int wylogowanieUzytkownika();
-
-    string wczytajLinie();
+    int odczytajIdZalogowanegoUzytkownika();
 
 };
 #endif
