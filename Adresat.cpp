@@ -1,4 +1,5 @@
 #include "Adresat.h"
+#include "UzytkownikMenedzer.h"
 
     void Adresat::ustawId(int noweId)
     {
@@ -49,4 +50,13 @@
     string Adresat::pobierzAdres()
     {
         return adres;
+    }
+    void Adresat::ustawIdZalogowanegoUzytkownika(int id)
+    {
+        idZalogowanegoUzytkownika = id;
+    }
+
+    int Adresat::pobierzIdUzytkownika()
+    {
+        return idZalogowanegoUzytkownika;
     }
