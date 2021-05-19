@@ -23,6 +23,8 @@ class AdresatMenedzer
     UzytkownikMenedzer uzytkownikMenedzer(string nazwaPlikuZUzytkownikami);
     PlikZAdresatami plikZAdresatami;
     MetodyPomocnicze metodyPomocnicze;
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    void wyswietlDaneAdresata(int i);
 
 public:
 
@@ -30,6 +32,8 @@ public:
     int dodajAdresata(int idZalogowanegoUzytkownika);
     void wyswietlWszystkichAdresatow();
     int odczytajIdZalogowanegoUzytkownika();
+
+    void wyswietlWszystkichAdresatow(int idZalogowanegoUzytkownika);
 
 };
 

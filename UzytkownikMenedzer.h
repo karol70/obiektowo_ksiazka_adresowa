@@ -35,5 +35,6 @@ public:
     int wylogowanieUzytkownika();
     int odczytajIdZalogowanegoUzytkownika();
 
+
 };
 #endif

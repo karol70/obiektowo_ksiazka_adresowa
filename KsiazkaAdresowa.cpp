@@ -37,8 +37,10 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
  int KsiazkaAdresowa::odczytajIdZalogowanegoUzytkownika()
  {
     uzytkownikMenedzer.odczytajIdZalogowanegoUzytkownika();
-
  }
-
+ void KsiazkaAdresowa::wyswietlWszystkichAdresatow(int idZalogowanegoUzytkownika)
+ {
+     adresatMenedzer.wyswietlWszystkichAdresatow(idZalogowanegoUzytkownika);
+ }
 
 

@@ -7,11 +7,11 @@ int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
     ksiazkaAdresowa.logowanieUzytkownika();
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow(ksiazkaAdresowa.odczytajIdZalogowanegoUzytkownika());
   //  ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
   //  ksiazkaAdresowa.wylogowanieUzytkownika();
-    ksiazkaAdresowa.dodajAdresata(ksiazkaAdresowa.odczytajIdZalogowanegoUzytkownika());
-
-    ksiazkaAdresowa.dodajAdresata(ksiazkaAdresowa.odczytajIdZalogowanegoUzytkownika());
+   // ksiazkaAdresowa.dodajAdresata(ksiazkaAdresowa.odczytajIdZalogowanegoUzytkownika());
+  //  ksiazkaAdresowa.dodajAdresata(ksiazkaAdresowa.odczytajIdZalogowanegoUzytkownika());
    // ksiazkaAdresowa.dodajAdresata(ksiazkaAdresowa.odczytajIdZalogowanegoUzytkownika());
   //  ksiazkaAdresowa.wylogowanieUzytkownika();
   //  ksiazkaAdresowa.logowanieUzytkownika();
