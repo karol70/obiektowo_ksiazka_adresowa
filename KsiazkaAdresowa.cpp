@@ -38,9 +38,9 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
  {
     uzytkownikMenedzer.odczytajIdZalogowanegoUzytkownika();
  }
- void KsiazkaAdresowa::wyswietlWszystkichAdresatow(int idZalogowanegoUzytkownika)
+ void KsiazkaAdresowa::wyswietlWszystkichAdresatow(int idZalogowanego)
  {
-     adresatMenedzer.wyswietlWszystkichAdresatow(idZalogowanegoUzytkownika);
+     adresatMenedzer.wyswietlWszystkichAdresatow(idZalogowanego);
  }
 
 

@@ -31,7 +31,6 @@ public:
     AdresatMenedzer(){}
     int dodajAdresata(int idZalogowanegoUzytkownika);
     void wyswietlWszystkichAdresatow();
-    int odczytajIdZalogowanegoUzytkownika();
 
     void wyswietlWszystkichAdresatow(int idZalogowanegoUzytkownika);
 
